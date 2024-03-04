@@ -246,7 +246,7 @@ h1 img {
     top: 0;
     left: 0;
 
-    transition: left ease-in 30000;
+    transition: left ease-in 0.3s;
 
     display: flex;
     flex-direction: row;
