@@ -19,6 +19,10 @@
 #header {
     width: 200px;
     height: calc(100vh - 120px);
+
+    position: fixed;
+
+    z-index: 10000;
 }
 
 #main {
@@ -26,6 +30,10 @@
     height: calc(100vh - 120px);
 
     display: flex;
+
+    position: absolute;
+    top: 0;
+    left: 201px;
 }
 
 .main01 {
@@ -48,6 +56,9 @@
 
     display: flex;
     justify-content: space-between;
+
+    position: fixed;
+    bottom: 0;
 }
 
 
@@ -66,19 +77,21 @@ h1 img {
     margin: 0 auto;
 }
 .gnb-inner {
-    width: 100%;
+    width: 300%;
 
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     padding: 15px;
-
-    
 }
 .gnb-list .depth1 {
+    position: relative;
+}
+.gnb-list .depth1-item {
     width: 170px;
     padding: 10px;
 
+    margin-bottom: 10px;
     display: block;
 
     font-size: 16px;
@@ -86,31 +99,28 @@ h1 img {
     border-bottom: 1px solid #333;
 
     position: relative;
-
 }
-.gnb-list .depth1:hover {
-    font-weight: 900;
-    background: #ffe3e3;
+.gnb-list .depth1-item:hover {
+    background: #f8d4da;
 }
 .gnb-list .depth1:hover .depth2 {
     display: block;
-}
-.gnb-list .depth1 a {
-    display: block;
-    width: 100%;
+
+    transition: all linear 2s;
 }
 .gnb-list .depth1 .depth2 {
-    /* display: none; */
-    position: absolute;
-    top: 0;
-    right: -100px;
-
-    width: 100px;
+    display: none;
+    
+    padding: 20px;
+    width: 100%;
+    background: #f8d4da70;
+}
+.gnb-list .depth1 .depth2 li {
+    padding-bottom: 5px;
+    width: 100%;
     height: auto;
 
-    z-index: 10000;
     
-    background: #ffe3e370;
 }
 
 /* Main01 */
